@@ -1,0 +1,67 @@
+/* VARS */
+:root {
+  --back: #18191a;
+  --white-font: #e4e6eb;
+}
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: var(--back);
+  color: var(--white-font);
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ___________________________________________ */
+
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+}
+#navbar * {
+    display: flex;
+}
