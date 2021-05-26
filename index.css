@@ -1,7 +1,11 @@
 /* VARS */
 :root {
   --back: #18191a;
+  --back-two: #242526;
+  --back-three: #3a3b3c;
   --white-font: #e4e6eb;
+  --white-secondary: #b8bbbf;
+  --header-height: 56px;
 }
 
 /* CSS RESET */
@@ -56,12 +60,41 @@ table {
 }
 /* ___________________________________________ */
 
-
 /* NAVBAR */
 #navbar {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--back-two);
+  height: var(--header-height);
+  border-bottom: 1px solid var(--back-three);
 }
-#navbar * {
-    display: flex;
+#navbar > * {
+  display: flex;
+}
+
+#navbar #nav-mid {
+  height: 100%;
+  align-items: center;
+}
+
+#nav-mid li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#nav-mid li:not(:last-child) {
+  margin-right: 2px;
+}
+
+.nav-mid-btn {
+  height: 80%;
+  width: 100px;
+  border-radius: 3px;
+}
+
+.svg-color-primary {
+  /* #B8BBBF */
+  filter: invert(83%) sepia(6%) saturate(168%) hue-rotate(175deg)
+    brightness(91%) contrast(88%);
 }
