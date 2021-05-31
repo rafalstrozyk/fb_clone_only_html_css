@@ -102,7 +102,7 @@ table {
   cursor: pointer;
   position: relative;
 }
-.nav-mid-btn span {
+.nav-mid-btn .btn-number {
   position: absolute;
   color: var(--white-font);
   background-color: var(--red);
@@ -117,8 +117,28 @@ table {
   border-radius: 50%;
 }
 
+.btn-info {
+  position: absolute;
+  background-color: rgba(228, 230, 235, 0.4);
+  color: var(--back);
+  border-radius: 10px;
+  font-size: 0.7rem;
+  padding: 5px 10px;
+  left: 0;
+  right: 0;
+  bottom: -70%;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.nav-mid-btn:hover .btn-info {
+  opacity: 1;
+}
+
 .no-open {
   transition: all 0.3s;
+  border-bottom: 4px solid transparent;
 }
 
 .no-open:hover {
