@@ -66,6 +66,15 @@ table {
   border-spacing: 0;
 }
 
+.container-grid {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'nav nav nav'
+    'left mid right';
+}
+
 .container-center {
   display: flex;
   align-items: center;
@@ -75,6 +84,7 @@ table {
 
 /* NAVBAR */
 #navbar {
+  grid-area: nav;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -262,4 +272,20 @@ table {
   background-color: transparent;
   outline: 0;
   color: var(--white-font);
+}
+
+#left-sidebar {
+  grid-area: left;
+  height: 90vh;
+  background-color: red;
+}
+#mid {
+  grid-area: mid;
+  height: 90vh;
+  background-color: blue;
+}
+#right-sidebar {
+  grid-area: right;
+  height: 90vh;
+  background-color: green;
 }
