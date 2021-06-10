@@ -11,6 +11,11 @@
 }
 
 /* CSS RESET */
+html,
+body {
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +65,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.container-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* ___________________________________________ */
 
 /* NAVBAR */
@@ -75,9 +86,9 @@ table {
   display: flex;
 }
 
+/* NAVBAR NAV-MID */
 #navbar #nav-mid {
   height: 100%;
-  align-items: center;
 }
 
 #nav-mid li {
@@ -89,19 +100,23 @@ table {
   margin-right: 2px;
 }
 
+/* NAVBAR NAV-RIGHT*/
+
 #nav-right > * {
   margin-right: 20px;
 }
 
+/* NAVBAR NAV-LEFT */
+
+#nav-left > * {
+  margin-left: 20px;
+}
+
+/* BUTTON */
 .btn {
   background-color: transparent;
   cursor: pointer;
   position: relative;
-}
-
-.btn .svg-img {
-  height: 65%;
-  width: auto;
 }
 
 .nav-mid-btn {
@@ -156,9 +171,6 @@ table {
   background-color: var(--back-three);
   padding: 5px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: background-color 0.3s;
 }
 
@@ -178,11 +190,8 @@ table {
 .btn-avatar-nav {
   height: 100%;
   width: auto;
-  display: flex;
   color: var(--white-font);
   font-weight: 500;
-  justify-content: center;
-  align-items: center;
   border-radius: 20px;
   padding: 4px;
   transition: background-color 0.3s;
@@ -200,6 +209,29 @@ table {
   margin-right: 8px;
 }
 
+/* SVG */
+
+.svg-img {
+  width: 100%;
+}
+
+.btn .svg-img {
+  height: 65%;
+  width: auto;
+}
+
+.svg-color-primary {
+  /* #B8BBBF */
+  filter: invert(83%) sepia(6%) saturate(168%) hue-rotate(175deg)
+    brightness(91%) contrast(88%);
+}
+
+.svg-color-secondary {
+  /* #2d88ff */
+  filter: invert(46%) sepia(54%) saturate(4043%) hue-rotate(199deg)
+    brightness(102%) contrast(100%);
+}
+
 .no-open {
   transition: all 0.3s;
   border-bottom: 4px solid transparent;
@@ -214,14 +246,20 @@ table {
   border-radius: 0;
 }
 
-.svg-color-primary {
-  /* #B8BBBF */
-  filter: invert(83%) sepia(6%) saturate(168%) hue-rotate(175deg)
-    brightness(91%) contrast(88%);
+#search {
+  background-color: var(--back-three);
+  border-radius: 20px;
+  padding: 10px;
+  outline: 0;
 }
 
-.svg-color-secondary {
-  /* #2d88ff */
-  filter: invert(46%) sepia(54%) saturate(4043%) hue-rotate(199deg)
-    brightness(102%) contrast(100%);
+#search .svg-img {
+  width: 20px;
+}
+
+#search-input {
+  margin-left: 5px;
+  background-color: transparent;
+  outline: 0;
+  color: var(--white-font);
 }
