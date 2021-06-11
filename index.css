@@ -292,7 +292,7 @@ table {
 }
 
 #left-sidebar ul:first-child {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 #left-sidebar ul > * {
@@ -300,10 +300,17 @@ table {
 }
 
 #left-sidebar ul li {
-  background-color: red;
-  padding: 10px;
+  font-weight: 500;
+  padding: 5px;
   border-radius: 15px;
   height: 15%;
+  width: 98%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#left-sidebar ul li:hover {
+  background-color: var(--back-three);
 }
 
 #left-sidebar ul li div {
