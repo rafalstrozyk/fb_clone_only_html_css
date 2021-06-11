@@ -14,6 +14,7 @@
 html,
 body {
   height: 100%;
+  background-color: var(--back);
 }
 
 * {
@@ -68,7 +69,7 @@ table {
 
 .container-grid {
   display: grid;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: 24% auto 24%;
   grid-template-rows: auto;
   grid-template-areas:
     'nav nav nav'
@@ -79,6 +80,12 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container-center-left {
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
 }
 /* ___________________________________________ */
 
@@ -276,8 +283,42 @@ table {
 
 #left-sidebar {
   grid-area: left;
-  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#left-sidebar ul {
+  margin-left: 15px;
+}
+
+#left-sidebar ul:first-child {
+  margin-top: 10px;
+}
+
+#left-sidebar ul > * {
+  margin-bottom: 6px;
+}
+
+#left-sidebar ul li {
   background-color: red;
+  padding: 10px;
+  border-radius: 15px;
+  height: 15%;
+}
+
+#left-sidebar ul li div {
+  margin-right: 5px;
+}
+
+.avatar {
+  display: block;
+}
+
+.avatar img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 #mid {
   grid-area: mid;
