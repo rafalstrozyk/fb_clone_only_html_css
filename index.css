@@ -283,13 +283,14 @@ table {
 
 #left-sidebar {
   width: 100%;
-  height: 90vh;
-  overflow: auto;
+  height: calc(100vh - var(--header-height));
+  overflow: hidden;
   grid-area: left;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
+  transition: all 0.3s;
+}
+
+#left-sidebar:hover {
+  overflow: auto;
 }
 
 #left-sidebar::-webkit-scrollbar {
@@ -309,22 +310,21 @@ table {
   box-shadow: inset 7px 10px 12px rgba(255, 255, 255, 0.2);
 }
 
-#left-sidebar #left-sidebar-top-menu {
+.left-sidebar-menu {
   width: 100%;
-  list-style: none;
 }
 
-#left-sidebar #left-sidebar-top-menu:first-child {
+.left-menu-list:first-child {
   margin-top: 25px;
 }
 
-#left-sidebar #left-sidebar-top-menu > * {
+.left-menu-list > * {
   margin-bottom: 6px;
 }
 
-#left-sidebar #left-sidebar-top-menu li {
+.left-menu-list li {
   font-weight: 500;
-  padding: 5px;
+  padding: 10px;
   border-radius: 15px;
   height: 15%;
   width: 98%;
@@ -332,11 +332,11 @@ table {
   transition: background-color 0.3s;
 }
 
-#left-sidebar #left-sidebar-top-menu li:hover {
+.left-menu-list li:hover {
   background-color: var(--back-three);
 }
 
-#left-sidebar #left-sidebar-top-menu li div {
+.left-menu-list li div {
   margin-right: 5px;
 }
 
@@ -347,13 +347,18 @@ table {
 #left-sidebar hr {
   border-top: 1px solid var(--white-secondary);
   width: 92%;
-  margin-top: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.avatar img {
+.left-img {
   width: 35px;
   height: 35px;
   object-fit: cover;
+  display: block;
+}
+
+.avatar img {
   border-radius: 50%;
 }
 #mid {
@@ -365,4 +370,33 @@ table {
   grid-area: right;
   height: 90vh;
   background-color: green;
+}
+
+.title-options-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-options {
+  font-weight: 500;
+  color: var(--white-secondary);
+}
+
+.btn-blue {
+  color: var(--blue);
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn-blue:hover {
+  background-color: var(--back-three);
+}
+
+.img-rec-container img {
+  border-radius: 10px;
 }
