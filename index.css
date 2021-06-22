@@ -309,7 +309,7 @@ table {
 
 .btn-desc {
   position: absolute;
-  background-color: rgba(228, 230, 235, 0.4);
+  background-color: rgba(228, 230, 235, 0.8);
   color: var(--back);
   border-radius: 10px;
   font-size: 0.7rem;
@@ -317,7 +317,7 @@ table {
   font-weight: 500;
   opacity: 0;
   transition: all 0.5s;
-  max-width: 250px;
+  width: 100%;
   min-width: 70px;
 }
 
@@ -358,10 +358,15 @@ table {
   border-radius: 10px;
   transition: all 0.3s;
   font-size: 0.9rem;
+  opacity: 0;
 }
 
 .btn-blue:hover {
   background-color: var(--back-three);
+}
+
+.title-options-header:hover .btn-blue {
+  opacity: 1;
 }
 
 .btn-avatar-nav {
@@ -386,9 +391,34 @@ table {
   margin-right: 8px;
 }
 
+.btn-options-svg {
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btn-options-svg:hover {
+  background-color: var(--back-three);
+}
+
+.btn-options-svg .btn-desc {
+  top: 110%;
+  right: 20%;
+}
+
 /* IMAGES */
 .img-rec-container img {
   border-radius: 10px;
+}
+
+.svg-options {
+  width: 18px;
+  height: 18px;
 }
 
 .left-img {
