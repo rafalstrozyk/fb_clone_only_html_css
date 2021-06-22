@@ -101,8 +101,13 @@ table {
 
 #mid {
   grid-area: mid;
-  height: 90vh;
-  background-color: blue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#mid > * {
+  margin-top: 25px;
 }
 #right-sidebar {
   grid-area: right;
@@ -445,4 +450,43 @@ hr {
   width: 92%;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+/* CARD */
+
+.card {
+  background-color: var(--back-three);
+  width: 70%;
+  min-width: 500px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-writer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-writer img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-writer-info img {
+  width: 15px;
+  height: 15px;
+}
+
+.link-h4 {
+  font-weight: 500;
+  font-size: 1.1rem;
 }
