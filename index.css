@@ -70,7 +70,7 @@ table {
 
 .container-grid {
   display: grid;
-  grid-template-columns: 0.5% 23.5% auto 23.5% 0.5%;
+  grid-template-columns: 10px 23.5% auto 23.5% 10px;
   grid-template-rows: var(--header-height) auto;
   /* grid-template-rows: auto; */
   grid-template-areas:
@@ -94,17 +94,26 @@ table {
   align-items: center;
   justify-content: inherit;
 }
+
+.bg-red {
+  background-color: var(--red) !important;
+}
+.bg-blue {
+  background-color: var(--blue) !important;
+}
 /* ___________________________________________ */
 
 /* AREAS */
 
 #left-sidebar {
+  width: 23.5%;
   max-width: 400px;
   height: calc(100vh - var(--header-height));
   grid-area: left;
   transition: all 0.3s;
   position: fixed;
   top: var(--header-height);
+  left: 10px;
 }
 
 #mid {
@@ -118,11 +127,12 @@ table {
   margin-top: 25px;
 }
 #right-sidebar {
+  width: 23.5%;
   grid-area: right;
   height: calc(100vh - var(--header-height));
   position: fixed;
   top: var(--header-height);
-  right: 0;
+  right: 10px;
   max-width: 400px;
 }
 
@@ -556,4 +566,43 @@ hr {
 .link-h4 {
   font-weight: 500;
   font-size: 1.1rem;
+}
+.card-like-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-like-section hr {
+  align-self: center;
+}
+
+.card-like-section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-like-section-likes {
+  display: flex;
+}
+
+.svg-small-like-section {
+  width: 12px;
+  height: 12px;
+  object-fit: cover;
+}
+
+.btn-like-section-svg {
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.btn-like-section-span {
+  margin-left: 10px;
+  color: var(--white-secondary);
+  font-size: 0.9rem;
+}
+
+.btn-like-section-span:hover span {
+  text-decoration: underline;
 }
