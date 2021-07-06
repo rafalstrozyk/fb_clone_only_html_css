@@ -9,6 +9,7 @@
   --red: #c00209;
   --header-height: 56px;
   --small-img: 35px;
+  --smaller-img: 20px;
 }
 
 /* CSS RESET */
@@ -121,6 +122,7 @@ table {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 #mid > * {
@@ -605,4 +607,25 @@ hr {
 
 .btn-like-section-span:hover span {
   text-decoration: underline;
+}
+
+.card-like-section-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-like-section-bottom button {
+  width: 33.333333%;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.card-like-section-bottom button:hover {
+  background-color: var(--back-three);
+}
+.card-like-section-bottom button img {
+  margin-right: 10px;
+  width: var(--smaller-img);
 }
